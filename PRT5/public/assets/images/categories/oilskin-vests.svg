@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6C42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg2)"/>
+  <g transform="translate(200, 150)">
+    <!-- Vest icon -->
+    <path d="M -50,-70 L -30,-90 L -10,-70 L -10,-20 L -50,-20 Z" fill="#F1C895" stroke="#660000" stroke-width="3"/>
+    <path d="M 50,-70 L 30,-90 L 10,-70 L 10,-20 L 50,-20 Z" fill="#F1C895" stroke="#660000" stroke-width="3"/>
+    <path d="M -10,-70 L -10,-20 L -50,-20 L -50,20 L 50,20 L 50,-20 L 10,-20 L 10,-70 Z" fill="#8B6C42" stroke="#660000" stroke-width="3"/>
+    <rect x="-5" y="-65" width="10" height="80" fill="#A0826B"/>
+    <circle cx="0" cy="-50" r="4" fill="#660000"/>
+    <circle cx="0" cy="-30" r="4" fill="#660000"/>
+    <circle cx="0" cy="-10" r="4" fill="#660000"/>
+  </g>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#F1C895" text-anchor="middle">Oilskin Vests</text>
+</svg>

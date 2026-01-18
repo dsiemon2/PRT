@@ -1,0 +1,153 @@
+version: '3.8'
+
+services:
+  # ===========================================
+  # Nginx Reverse Proxy - Port 8300
+  # ===========================================
+  nginx:
+    image: nginx:alpine
+    container_name: prt_nginx
+    ports:
+      - "8300:80"
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./PRT5:/var/www/prt:ro
+      - ./pecos-backendadmin-api:/var/www/api:ro
+    depends_on:
+      - prt
+      - api
+    networks:
+      - prt_network
+
+  # ===========================================
+  # PRT5 - Customer Storefront
+  # URL: http://localhost:8300/
+  # ===========================================
+  prt:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: prt_storefront
+    volumes:
+      - ./PRT5:/var/www/prt
+    environment:
+      - DB_HOST=mysql
+      - DB_DATABASE=pecosriver
+      - DB_USERNAME=root
+      - DB_PASSWORD=secret
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - prt_network
+
+  # ===========================================
+  # API - REST Backend
+  # URL: http://localhost:8300/api/
+  # ===========================================
+  api:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: prt_api
+    volumes:
+      - ./pecos-backendadmin-api:/var/www/api
+    environment:
+      - DB_HOST=mysql
+      - DB_DATABASE=pecosriver
+      - DB_USERNAME=root
+      - DB_PASSWORD=secret
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - prt_network
+
+  # ===========================================
+  # Admin - Dashboard Site
+  # URL: http://localhost:8301/admin (own port, like XAMPP's 8001)
+  # ===========================================
+  admin:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: prt_admin
+    volumes:
+      - ./pecos-backend-admin-site:/var/www/admin
+    environment:
+      - DB_HOST=mysql
+      - DB_DATABASE=pecosriver
+      - DB_USERNAME=root
+      - DB_PASSWORD=secret
+      - API_BASE_URL=http://host.docker.internal:8300/api/v1
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - prt_network
+
+  # ===========================================
+  # Nginx for Admin Panel (separate port 8301)
+  # ===========================================
+  nginx-admin:
+    image: nginx:alpine
+    container_name: prt_nginx_admin
+    ports:
+      - "8301:80"
+    volumes:
+      - ./docker/nginx/admin.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./pecos-backend-admin-site:/var/www/admin:ro
+    depends_on:
+      - admin
+    networks:
+      - prt_network
+
+  # ===========================================
+  # MySQL Database
+  # Port: 3307 (external) -> 3306 (internal)
+  # ===========================================
+  mysql:
+    image: mysql:8.0
+    container_name: prt_mysql
+    ports:
+      - "3307:3306"  # 3307 to avoid conflict with XAMPP's 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: pecosriver
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-psecret"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - prt_network
+
+  # ===========================================
+  # phpMyAdmin (Optional - for database management)
+  # URL: http://localhost:8380
+  # ===========================================
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: prt_phpmyadmin
+    ports:
+      - "8380:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - prt_network
+
+networks:
+  prt_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

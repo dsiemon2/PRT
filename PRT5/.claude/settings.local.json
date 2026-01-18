@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(php artisan serve:*)",
+      "Bash(dir \"C:\\\\xampp\\\\htdocs\\\\prt4\\\\assets\" /s /b)",
+      "Bash(xcopy:*)",
+      "Bash(if not exist \"C:\\\\xampp\\\\htdocs\\\\PRT5\\\\public\\\\assets\\\\images\" mkdir \"C:\\\\xampp\\\\htdocs\\\\PRT5\\\\public\\\\assets\\\\images\")",
+      "Bash(if not exist \"C:\\\\xampp\\\\htdocs\\\\PRT5\\\\public\\\\assets\\\\js\" mkdir \"C:\\\\xampp\\\\htdocs\\\\PRT5\\\\public\\\\assets\\\\js\")",
+      "Bash(ls:*)",
+      "Bash(php artisan:*)",
+      "Bash(curl:*)",
+      "Bash(php -r:*)",
+      "Bash(mysql:*)",
+      "Bash(/c/xampp/mysql/bin/mysql:*)",
+      "Bash(dir \"C:\\\\xampp\\\\htdocs\")",
+      "Bash(dir:*)",
+      "Bash(copy C:xampphtdocsprt4assetscsscustom.css C:xampphtdocsPRT5publicassetscsscustom.css)",
+      "Bash(cat:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
+    ]
+  }
+}

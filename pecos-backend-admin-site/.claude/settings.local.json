@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan serve:*)",
+      "Bash(php artisan:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill //F //PID 49540)",
+      "Bash(taskkill //F //PID 49468)",
+      "Bash(taskkill //F //PID 70832)",
+      "Bash(dir /s /b C:xampphtdocs*prt2*)",
+      "Bash(find:*)",
+      "Bash(dir /s /b C:xampphtdocs*prt*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

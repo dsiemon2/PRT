@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(docker:*)",
+      "Bash(docker-compose:*)",
+      "Bash(curl:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(C:xamppmysqlbinmysqldump -u root pecosriver)",
+      "Bash(cmd /c \"C:\\\\xampp\\\\mysql\\\\bin\\\\mysqldump -u root pecosriver\")",
+      "Bash(copy /Y \"pecos-backend-admin-site\\\\.env.docker\" \"pecos-backend-admin-site\\\\.env\")",
+      "Bash(copy /Y \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\PRT\\\\pecos-backend-admin-site\\\\.env.docker\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\PRT\\\\pecos-backend-admin-site\\\\.env\")",
+      "Bash(php artisan view:clear:*)",
+      "Bash(ls:*)",
+      "Bash(start \"\" \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\")",
+      "Bash(grep:*)",
+      "Bash(php artisan cache:clear:*)",
+      "Bash(php artisan config:clear:*)",
+      "Bash(mysql:*)",
+      "Bash(find:*)",
+      "Bash(php artisan:*)",
+      "Bash(timeout /t 3)",
+      "Bash(powershell -Command:*)",
+      "Bash(timeout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(composer update:*)",
+      "Bash(composer show:*)",
+      "Bash(copy /Y \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\PRT\\\\pecos-backendadmin-api\\\\database\\\\migrations\\\\2026_01_15_000007_create_product_variants_tables.php\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\Maximus\\\\maximus-backendadmin-api\\\\database\\\\migrations\"\")"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+'Category,ItemNumber,ShortDescription,LngDescription,UnitPrice,QTY,Image
+********************************************************************
+Boots,0901705320700,Leather Cowboy Boots,This boot is made from Real Leather,25.95,2,/images/children/boots/0901705320700.jpg
+chunks,0901705300190,Fuzzy Chunk,This is a Chunk,15.95,2,/images/children/chunks/0901705300190.jpg
+********************************************************************

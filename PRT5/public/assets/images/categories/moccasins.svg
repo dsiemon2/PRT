@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6C42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#660000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg1)"/>
+  <g transform="translate(200, 140)">
+    <!-- Moccasin shoe icon -->
+    <ellipse cx="0" cy="20" rx="70" ry="25" fill="#A0522D" stroke="#660000" stroke-width="3"/>
+    <ellipse cx="0" cy="10" rx="60" ry="20" fill="#D2691E"/>
+    <path d="M -50,0 Q -60,-30 -30,-40 Q 0,-45 30,-40 Q 60,-30 50,0" fill="#CD853F" stroke="#660000" stroke-width="2"/>
+    <!-- Decorative stitching -->
+    <path d="M -30,-20 L 0,-25 L 30,-20" fill="none" stroke="#F1C895" stroke-width="2" stroke-dasharray="4,4"/>
+    <circle cx="-15" cy="-15" r="3" fill="#F1C895"/>
+    <circle cx="0" cy="-18" r="3" fill="#F1C895"/>
+    <circle cx="15" cy="-15" r="3" fill="#F1C895"/>
+  </g>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#F1C895" text-anchor="middle">Moccasins</text>
+</svg>

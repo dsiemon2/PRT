@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#660000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#990000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg3)"/>
+  <g transform="translate(200, 150)">
+    <!-- T-shirt icon -->
+    <path d="M -60,-60 L -40,-80 L -15,-65 L -15,-40 L -60,-40 Z" fill="#F1C895" stroke="#8B6C42" stroke-width="3"/>
+    <path d="M 60,-60 L 40,-80 L 15,-65 L 15,-40 L 60,-40 Z" fill="#F1C895" stroke="#8B6C42" stroke-width="3"/>
+    <rect x="-15" y="-65" width="30" height="85" rx="3" fill="#556B2F" stroke="#8B6C42" stroke-width="3"/>
+    <!-- Star emblem -->
+    <polygon points="0,-35 3,-28 10,-28 5,-23 7,-16 0,-21 -7,-16 -5,-23 -10,-28 -3,-28" fill="#F1C895"/>
+  </g>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#F1C895" text-anchor="middle">Military T-Shirts</text>
+</svg>
