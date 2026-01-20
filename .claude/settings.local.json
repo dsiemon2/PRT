@@ -26,7 +26,11 @@
       "Bash(npm run dev:*)",
       "Bash(composer update:*)",
       "Bash(composer show:*)",
-      "Bash(copy /Y \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\PRT\\\\pecos-backendadmin-api\\\\database\\\\migrations\\\\2026_01_15_000007_create_product_variants_tables.php\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\Maximus\\\\maximus-backendadmin-api\\\\database\\\\migrations\"\")"
+      "Bash(copy /Y \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\PRT\\\\pecos-backendadmin-api\\\\database\\\\migrations\\\\2026_01_15_000007_create_product_variants_tables.php\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\Maximus\\\\maximus-backendadmin-api\\\\database\\\\migrations\"\")",
+      "Bash(netstat:*)",
+      "Bash(tasklist /FI \"PID eq 24332\" /V)",
+      "Bash(cmd //c \"tasklist /FI \"\"PID eq 24332\"\"\")",
+      "Bash(taskkill:*)"
     ]
   }
 }

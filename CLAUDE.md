@@ -91,7 +91,7 @@ PRT/
 
 ### Admin Panel
 - URL: http://localhost:8301/adminpanel
-- Email: `admin@pecos.com`
+- Email: `test@pecosriver.com`
 - Password: `Test1234`
 
 ## Docker Commands
